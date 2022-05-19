@@ -2,12 +2,12 @@ import { useState, useEffect } from "react";
 import Person from "./Person";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 
-function People({ people, setPeople }) {
+function People({ people }) {
   const [count, setCount] = useState(0);
   const [filteredPerson, setFilteredPerson] = useState(people[0]);
 
   useEffect(() => {
-    setFilteredPerson(people[count])
+    setFilteredPerson(people[count]);
   }, [count]);
 
   const generateRandomNumber = () => {
